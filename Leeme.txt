@@ -23,7 +23,23 @@ puede que les pida iniciar sesión en github, solo ingresen su cuenta y no habr�
 pd: es un pedo subir archivos a github, pero una vez que le agarren el rollo, nos ahorrará muchisimo tiempo.
 
 Okay, ahora les escribiré como se suben archivos a github y como poder actualizar esto más rapido, se los 
-explicaré paso por paso
+explicaré paso por paso.
+
+Primero que nada tienen que tener en cuenta que git funciona 100% por medio de la consola, lo que necesitan
+es un editor de texto que cuente con consola o "Terminal" (Visual studio code).
+
+bueno, lo primero que tienen que saber es que tienen que crear su propia "branch" o rama, pero les ahorraré esto 
+y ya tendrán branches creadas para cada quien
+
+****NOTA****
+POR NINGUNA SITUACIÓN DEBEN DE USAR LA BRANCH DE OTRA PERSONA
+sobre aviso no hay engaño culeros
+
+okay, una vez aclarado ese punto
+Tienen que tener descargada la master branch (ya les expliqué como hacerlo).
+Descargan la master branch, y actualizan toda su branch, con respecto a la master
+
+
 
 
 
