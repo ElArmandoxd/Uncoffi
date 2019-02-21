@@ -1,0 +1,21 @@
+Que onda chavos xd
+
+soy el Armando
+este archivo es para explicarles un poco como funciona github y como nos va a ayudar para trabajar de una forma
+más simple en todo este proyecto.
+
+primero que nada, deben de tener instalado "Git" en su computadora.
+Lo pueden descargar del siguiente link:
+https://git-scm.com/download/win
+
+Despues de ya tener github instalado, necesitarán un editor de texto (Preferentemente "Visual studio code").
+esto por que viene con plugins instalados para poder trabajar github de una forma mucho más fácil.
+
+Lo primero que haremos ya teniendo git y visual studio code:
+
+1.- Crear una nueva carpeta para tener el proyecto guardado ahí
+2.- abrimos la consola (cmd) y entramos a la carpeta que hayamos creado (esto es facil, copian la direccion de su
+carpeta, y en la linea de comandos escriben "cd <y aquí pegan la ubicacion de su carpeta>")
+3.- una vez que esten dentro de la carpeta en el cmd, van a escribir "git clone https://github.com/ElArmandoxd/Uncoffi.git"
+y les va a empezar a descargar todos los archivos del repositorio en su carpeta de trabajo.
+puede que les pida iniciar sesión en github, solo ingresen su cuenta y no habrá ningun problema.
