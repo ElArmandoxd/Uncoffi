@@ -39,6 +39,13 @@ okay, una vez aclarado ese punto
 Tienen que tener descargada la master branch (ya les expliqué como hacerlo).
 Descargan la master branch, y actualizan toda su branch, con respecto a la master
 
+Pasos a seguir.
+1.- Entrar en Visual studio code, y en la esquina inferior izquierda, seleccionen donde dice master, y los mandará
+    a escoger otra branch, escogan la que tenga su nombre
+2.- Una vez que estén en su branch, asegurensé de escribir en la terminal (Pulsa ctrl + shift + u para abrir la consola
+    y vayanse al apartado de terminal) "git pull"
+    para actualizar su branch con respecto a la branch master
+3.- Crear un archivo o modificar un archivo existente del proyecto
 
 
 
