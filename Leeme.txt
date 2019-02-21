@@ -19,3 +19,11 @@ carpeta, y en la linea de comandos escriben "cd <y aquí pegan la ubicacion de s
 3.- una vez que esten dentro de la carpeta en el cmd, van a escribir "git clone https://github.com/ElArmandoxd/Uncoffi.git"
 y les va a empezar a descargar todos los archivos del repositorio en su carpeta de trabajo.
 puede que les pida iniciar sesión en github, solo ingresen su cuenta y no habrá ningun problema.
+
+pd: es un pedo subir archivos a github, pero una vez que le agarren el rollo, nos ahorrará muchisimo tiempo.
+
+Okay, ahora les escribiré como se suben archivos a github y como poder actualizar esto más rapido, se los 
+explicaré paso por paso
+
+
+
