@@ -46,7 +46,3 @@ Pasos a seguir.
     y vayanse al apartado de terminal) "git pull"
     para actualizar su branch con respecto a la branch master
 3.- Crear un archivo o modificar un archivo existente del proyecto
-
-
-
-
