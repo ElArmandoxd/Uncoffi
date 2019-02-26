@@ -27,12 +27,12 @@ boton1_cancelar = boton1_cancelar.addEventListener("click", cancelar1);
 
 boton1 = boton1.addEventListener("click", añadir1);
 boton2 = boton2.addEventListener("click", añadir2);
-boton_ordenar = boton_ordenar.addEventListener("click", fin_orden);
+/*boton_ordenar = boton_ordenar.addEventListener("click", fin_orden);
 
 function fin_orden()
 {
     alert("Si jala esta madre");
-}
+}*/
 
 function guisos(sabor)
 {
