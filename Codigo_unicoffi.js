@@ -13,7 +13,7 @@ var deshebrada = new guisos("Deshebrada", "normal");
 var discada = new guisos("Discada", "normal");
 var chicharron = new guisos("Chicharron", "normal");
 var pollo_chi = new guisos("Pollo con chipotle", "normal");
-var picadillo = new guisos("Picadillo: ", picadillo_tipo);
+var picadillo = new guisos("Picadillo: ", picadillo.tipo);
 var fajas_pollo = new guisos("Fajitas de pollo", "normal");
 
 var boton1_cancelar = document.getElementById("btn_1_cancel");
@@ -33,6 +33,11 @@ boton_ordenar = boton_ordenar.addEventListener("click", fin_orden);
 function fin_orden()
 {
     console.log(total);
+}
+
+function picadillo(tipo)
+{
+    this.tipo = tipo;
 }
 
 function guisos(nombre,tipo)
@@ -80,23 +85,29 @@ function añadir2()
             burro.tipo = pollo_chi;
             break;
         case "5":
+            burro.tipo = fajas_pollo;
+            break;
+        case "6":
             var seleccion_pica = prompt("Seleccione el tipo de picadillo: \n(1)Rojo\n(2)Verde\n(3)A la mexicana");
             switch (seleccion_pica)
             {
                 case "1":
-                    burro.tipo = picadillo_tipo["Rojo"];
+                    picadillo.tipo = "Rojo";
                     break;
                 case "2":
-                    burro.tipo = picadillo_tipo["Verde"];
+                    picadillo.tipo = "Verde";
                     break;
                 case "3":
-                    burro.tipo = picadillo_tipo["A la mexicana"];
+                    picadillo.tipo = "A la mexicana";
                     break;
+                default:
+                    alert("¡No se ha especificado el tipo de picadillo! por favor intente de nuevo.");
+                    total = total - burro.precio;
             }
-
-            
-        
-
+            break;
+        default:
+            alert("¡No se ha especificado el tipo de burro! por favor intente de nuevo.");
+            total = total - burro.precio;
     }
     console.log("Se ha añadido al pedido un Burro");
     total = total + burro.precio;
