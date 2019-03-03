@@ -16,7 +16,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-        margin-bottom: 150px;
+    margin-bottom: 150px;
 }
 .content-form {
     background-color: #a40018;
