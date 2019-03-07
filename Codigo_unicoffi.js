@@ -1,18 +1,20 @@
 var na = "Sin especificar";
+var seleccion;
+var seleccion_pica; 
 
 var contador1 = 0;
 var contador2 = 0;
 
 var hamburguesa = new comida(na,35,"Hamburguesa");
 var hamburguesa_pp = new comida(na, 38, "Hamburguesa con papas");
-var burro_des = new comida("Deshebrada", 13, "burro");
-var burro_dis = new comida("Discada", 13, "burro");
-var burro_chi = new comida("Chicharron", 13, "burro");
-var burro_poch = new comida("Pollo en chipotle", 13, "burro");
-var burro_pimx = new comida("Picadillo a la mexicana", 13, "burro");
-var burro_pirj = new comida("Picadillo rojo", 13, "burro");
-var burro_pivd = new comida("Picadillo verde", 13, "burro");
-var burro_pofa = new comida("Fajitas de pollo", 19, "burro");
+var burro = new comida(guisos, 13, "Burro de " + guisos.nombre);
+
+var deshebrada = new guisos("Deshebrada", "normal");
+var discada = new guisos("Discada", "normal");
+var chicharron = new guisos("Chicharron", "normal");
+var pollo_chi = new guisos("Pollo con chipotle", "normal");
+var picadillo = new guisos("Picadillo: ", picadillo.tipo);
+var fajas_pollo = new guisos("Fajitas de pollo", "normal");
 
 var boton1_cancelar = document.getElementById("btn_1_cancel");
 var boton2_cancelar = document.getElementById("btn_2_cancel");
@@ -22,21 +24,26 @@ var boton1 = document.getElementById("btn_1");
 var boton2 = document.getElementById("btn_2");
 var boton_ordenar = document.getElementById("btn_ordenar");
 
-
 boton1_cancelar = boton1_cancelar.addEventListener("click", cancelar1);
 
 boton1 = boton1.addEventListener("click", añadir1);
 boton2 = boton2.addEventListener("click", añadir2);
-/*boton_ordenar = boton_ordenar.addEventListener("click", fin_orden);
+boton_ordenar = boton_ordenar.addEventListener("click", fin_orden);
 
 function fin_orden()
 {
-    alert("Si jala esta madre");
-}*/
+    console.log(total);
+}
 
-function guisos(sabor)
+function picadillo(tipo)
 {
-    this.sabor = sabor;
+    this.tipo = tipo;
+}
+
+function guisos(nombre,tipo)
+{
+    this.tipo = tipo;
+    this.sabor = nombre;
 }
 
 function desayuno(guiso, huevo, chilaquiles)
@@ -62,8 +69,48 @@ function añadir1()
 
 function añadir2()
 {
+    var seleccion_gui = prompt("Seleccione el guiso del burro:  \n(1)Discada\n(2)Deshebrada\n(3)Chicharrón\n(4)Pollo al chipotle\n(5)Fajitas de pollo\n(6)Picadillo(mexicano,rojo o verde)");
+    switch(seleccion_gui)
+    {
+        case "1":
+            burro.tipo = discada;
+            break;
+        case "2":
+            burro.tipo = deshebrada;
+            break;
+        case "3":
+            burro.tipo = chicharron;
+            break;
+        case "4":
+            burro.tipo = pollo_chi;
+            break;
+        case "5":
+            burro.tipo = fajas_pollo;
+            break;
+        case "6":
+            var seleccion_pica = prompt("Seleccione el tipo de picadillo: \n(1)Rojo\n(2)Verde\n(3)A la mexicana");
+            switch (seleccion_pica)
+            {
+                case "1":
+                    picadillo.tipo = "Rojo";
+                    break;
+                case "2":
+                    picadillo.tipo = "Verde";
+                    break;
+                case "3":
+                    picadillo.tipo = "A la mexicana";
+                    break;
+                default:
+                    alert("¡No se ha especificado el tipo de picadillo! por favor intente de nuevo.");
+                    total = total - burro.precio;
+            }
+            break;
+        default:
+            alert("¡No se ha especificado el tipo de burro! por favor intente de nuevo.");
+            total = total - burro.precio;
+    }
     console.log("Se ha añadido al pedido un Burro");
-    total = total + burro;
+    total = total + burro.precio;
     contador2 ++;
 }
 
@@ -94,7 +141,6 @@ function cancelar2()
     {
         alert("No se ha encontrado elemento en el pedido");
     }
-    
 }
 
 
