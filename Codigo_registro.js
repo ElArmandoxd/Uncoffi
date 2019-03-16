@@ -7,7 +7,7 @@ btn_registro = btn_registro.addEventListener("click", nuevo_usuario);
 
 function nuevo_usuario()
 {
-    var usuario = new usuario(nombre,nickname,contraseña,matricula);
+    var usuario = new usuario(nombre,nickname,contraseña,matricula,id_usuario);
     id_usuario ++;
 }
 
