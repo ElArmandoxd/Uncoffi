@@ -1,13 +1,24 @@
+//variables con motivo de soporte logico, solo para poder realizar operaciones de forma mas sencilla.
+
 var na = "Sin especificar";
 var seleccion;
 var seleccion_pica; 
+var id_usuario = 0;
+var total = 0;
+
+//contadores para el numero de pedidos.
 
 var contador1 = 0;
 var contador2 = 0;
 
+//aquí están las comidas ya declaradas con objeto con atributos.
+
 var hamburguesa = new comida(na,35,"Hamburguesa");
 var hamburguesa_pp = new comida(na, 38, "Hamburguesa con papas");
 var burro = new comida(guisos, 13, "Burro de " + guisos.nombre);
+
+
+// aquí están todos los guisos que se pueden usar tanto en burros, gorditas, sincronizadas etc.
 
 var deshebrada = new guisos("Deshebrada", "normal");
 var discada = new guisos("Discada", "normal");
@@ -16,10 +27,13 @@ var pollo_chi = new guisos("Pollo con chipotle", "normal");
 var picadillo = new guisos("Picadillo: ", picadillo.tipo);
 var fajas_pollo = new guisos("Fajitas de pollo", "normal");
 
+//botones para cancelar pedidos.
+
 var boton1_cancelar = document.getElementById("btn_1_cancel");
 var boton2_cancelar = document.getElementById("btn_2_cancel");
 
-var total = 0;
+//botones para añadir pedidos y ordenar.
+
 var boton1 = document.getElementById("btn_1");
 var boton2 = document.getElementById("btn_2");
 var boton_ordenar = document.getElementById("btn_ordenar");
@@ -29,6 +43,8 @@ boton1_cancelar = boton1_cancelar.addEventListener("click", cancelar1);
 boton1 = boton1.addEventListener("click", añadir1);
 boton2 = boton2.addEventListener("click", añadir2);
 boton_ordenar = boton_ordenar.addEventListener("click", fin_orden);
+
+//SECCIÓN DE FUNCIONES, ¡¡NO TOCAR SIN CONSULTAR A ARMANDO!!.
 
 function fin_orden()
 {
@@ -66,6 +82,8 @@ function añadir1()
     total = total + hamburguesa.precio;
     contador1 ++;
 }
+
+//funcion que añade los burros, en esta tenemos que hacer los cambios que nos dijo Xochitl xd
 
 function añadir2()
 {
