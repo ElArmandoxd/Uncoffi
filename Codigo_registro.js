@@ -9,6 +9,7 @@ function nuevo_usuario()
 {
     var usuario = new usuario(nombre,nickname,contraseña,matricula,id_usuario);
     id_usuario ++;
+    console.log("Se ha creado " + usuario.id_usuario);
 }
 
 function usuario(nombre,nickname,contraseña,matricula,id_usuario)
