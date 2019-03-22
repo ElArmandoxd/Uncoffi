@@ -36,7 +36,7 @@ main {
 .form-control {
     width: 100%;
     padding: 8px;
-    border: 1px solid rgba(13, 60, 115, 0.36);
+    border: 1px solid rgb(255, 72, 0);
     margin-bottom: 5px;
 } 
 .sub-form {
@@ -97,8 +97,6 @@ footer{
     width: 100%;
 }
 .btn {
-    
         width: 100%;
 }
- 
 }
