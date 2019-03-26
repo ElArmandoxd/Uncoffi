@@ -37,17 +37,28 @@ var boton2_cancelar = document.getElementById("btn_2_cancel");
 var boton1 = document.getElementById("btn_1");
 var boton2 = document.getElementById("btn_2");
 var boton_ordenar = document.getElementById("btn_ordenar");
+var boton_borrar = document.getElementById("borrar_pedido");
+var modal_in = document.getElementById("modal_interno");
 
 boton1_cancelar = boton1_cancelar.addEventListener("click", cancelar1);
 
 boton1 = boton1.addEventListener("click", añadir1);
 boton2 = boton2.addEventListener("click", añadir2);
 boton_ordenar = boton_ordenar.addEventListener("click", fin_orden);
+boton_borrar = boton_borrar.addEventListener("click", borrarpedido);
 
 //SECCIÓN DE FUNCIONES, ¡¡NO TOCAR SIN CONSULTAR A ARMANDO!!.
 
+function borrarpedido()
+{
+    total = 0;
+    contador1 = 0;
+    contador2 = 0;
+}
+
 function fin_orden()
 {
+    modal_in.innerHTML="Si jala esta madre";
     console.log(total);
 }
 
@@ -92,18 +103,23 @@ function añadir2()
     {
         case "1":
             burro.tipo = discada;
+            console.log("Se ha añadido al pedido un Burro");
             break;
         case "2":
             burro.tipo = deshebrada;
+            console.log("Se ha añadido al pedido un Burro");
             break;
         case "3":
             burro.tipo = chicharron;
+            console.log("Se ha añadido al pedido un Burro");
             break;
         case "4":
             burro.tipo = pollo_chi;
+            console.log("Se ha añadido al pedido un Burro");
             break;
         case "5":
             burro.tipo = fajas_pollo;
+            console.log("Se ha añadido al pedido un Burro");
             break;
         case "6":
             var seleccion_pica = prompt("Seleccione el tipo de picadillo: \n(1)Rojo\n(2)Verde\n(3)A la mexicana");
@@ -111,12 +127,15 @@ function añadir2()
             {
                 case "1":
                     picadillo.tipo = "Rojo";
+                    console.log("Se ha añadido al pedido un Burro");
                     break;
                 case "2":
                     picadillo.tipo = "Verde";
+                    console.log("Se ha añadido al pedido un Burro");
                     break;
                 case "3":
                     picadillo.tipo = "A la mexicana";
+                    console.log("Se ha añadido al pedido un Burro");
                     break;
                 default:
                     alert("¡No se ha especificado el tipo de picadillo! por favor intente de nuevo.");
@@ -127,7 +146,6 @@ function añadir2()
             alert("¡No se ha especificado el tipo de burro! por favor intente de nuevo.");
             total = total - burro.precio;
     }
-    console.log("Se ha añadido al pedido un Burro");
     total = total + burro.precio;
     contador2 ++;
 }

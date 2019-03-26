@@ -16,7 +16,6 @@ function login()
     contraseña_lbl = document.getElementById("inputPassword").value;
     if (usuario_lbl == usuario && contraseña_lbl == contraseña)
     {
-        //alert("¡Bienvenido!");
         setTimeout("location.href='interfaz2Menu.html'");
     }
     else
