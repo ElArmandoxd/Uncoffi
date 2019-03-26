@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+.container{
+    color: #F9AE00;
+}
+.py-4
+{
+    background-color: rgba(0, 0, 0, 0.288);
+}
+.btn-primary
+{
+    background-color: orangered;
+    border-color: orangered;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F9AE00;
+}
+body {
+  background-color: #a40018 ;
+  background: linear-gradient(to right, #a40018, #a40018);
+}
