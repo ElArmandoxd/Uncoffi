@@ -61,8 +61,8 @@
                     <p>Precio..........35$</p>
                     <p>Ingredientes:</p>
                     <p>   Jamón, Carne, Lechuga, Tomate, Queso, Pan, Mayonesa y Ketchup,</p>
-                    <a class="btn btn-primary" id="btn_1"href="#">Añadir</a>
-                    <a class="btn btn-primary" id="btn_1_cancel"href="#">Cancelar</a>
+                    <a class="btn btn-primary" id="btn_1">Añadir</a>
+                    <a class="btn btn-primary" id="btn_1_cancel">Cancelar</a>
                   </div>
                 </div>
                 <!-- /.row -->
@@ -82,8 +82,8 @@
                     <p>Ingredientes: </p>
                     <p>Guiso, tortilla harina y mayonesa</p>
                     <p>Guisos: deshebrada, discada, chicharrón, pollo con chipotle, fajitas de pollo, picadillo(a la mexicana, rojo y verde)</p>
-                    <a class="btn btn-primary" id="btn_2"href="#">Añadir</a>
-                    <a class="btn btn-primary" id="btn_2_cancel"href="#">Cancelar</a>
+                    <a class="btn btn-primary" id="btn_2">Añadir</a>
+                    <a class="btn btn-primary" id="btn_2_cancel">Cancelar</a>
                   </div>
                 </div>
                 <!-- /.row -->
@@ -93,7 +93,7 @@
                 <!-- Project Three -->
                 <div class="row food_card">
                   <div class="col-md-7">
-                    <a href="#">
+                    <a>
                       <img class="img-fluid rounded mb-3 mb-md-0" src="img/sincro.jpg" alt="">
                     </a>
                   </div>
@@ -102,8 +102,8 @@
                     <p>Precio............18$</p>
                     <p>Ingredientes: </p>
                     <p>Jamon, queso, tortilla de harina</p>
-                    <a class="btn btn-primary" id="btn_3"href="#">Añadir</a>
-                    <a class="btn btn-primary" id="btn_3_cancel"href="#">Cancelar</a>
+                    <a class="btn btn-primary" id="btn_3">Añadir</a>
+                    <a class="btn btn-primary" id="btn_3_cancel">Cancelar</a>
                   </div>
                 </div>
                 <!-- /.row -->
@@ -114,7 +114,7 @@
                 <div class="row food_card">
           
                   <div class="col-md-7">
-                    <a href="#">
+                    <a>
                       <img class="img-fluid rounded mb-3 mb-md-0" src="img/huevos2.jpg" alt="">
                     </a>
                   </div>
@@ -123,8 +123,8 @@
                     <p>Precio............$33</p>
                     <p>Ingredientes: </p>
                     <p>Frijoles con queso, chilaquiles, huevo</p>
-                    <a class="btn btn-primary" href="4">Añadir</a>
-                    <a class="btn btn-primary" id="btn_4_cancel"href="#">Cancelar</a>
+                    <a class="btn btn-primary" id = "btn_4">Añadir</a>
+                    <a class="btn btn-primary" id="btn_4_cancel">Cancelar</a>
                   </div>
                 </div>
                 <!-- /.row -->
@@ -134,7 +134,7 @@
                 <div class="row food_card">
           
                   <div class="col-md-7">
-                    <a href="#">
+                    <a>
                       <img class="img-fluid rounded mb-3 mb-md-0" src="img/gorditas.jpeg" alt="">
                     </a>
                   </div>
@@ -143,8 +143,8 @@
                     <p>Precio............$13</p>
                     <p>Ingredientes: </p>
                     <p>Guisos: deshebrada, discada, chicharrón, pollo con chipotle, fajitas de pollo, picadillo(a la mexicana, rojo y verde)</p>
-                    <a class="btn btn-primary" href="5">Añadir</a>
-                    <a class="btn btn-primary" id="btn_5_cancel"href="#">Cancelar</a>
+                    <a class="btn btn-primary" id = "btn_5">Añadir</a>
+                    <a class="btn btn-primary" id="btn_5_cancel">Cancelar</a>
                   </div>
                 </div>
                 <!-- /.row -->
@@ -155,7 +155,7 @@
                 <div class="row food_card">
           
                   <div class="col-md-7">
-                    <a href="#">
+                    <a>
                       <img class="img-fluid rounded mb-3 mb-md-0" src="img/csandwich.jpg" alt="">
                     </a>
                   </div>
@@ -164,10 +164,11 @@
                     <p>Precio............$23</p>
                     <p>Ingredientes: </p>
                     <p>3 rebanadas de pan integral, queso amarillo, tocino, jamon, pollo, tomate y mayonesa</p>
-                    <a class="btn btn-primary" href="6">Añadir</a>
-                    <a class="btn btn-primary" id="btn_6_cancel"href="#">Cancelar</a>
+                    <a class="btn btn-primary" >Añadir</a>
+                    <a class="btn btn-primary" id="btn_6_cancel">Cancelar</a>
                   </div>
                 </div>
+
                 <!-- /.row -->
 
                 <hr>
@@ -175,12 +176,29 @@
                 <!-- Pagination -->
                 <ul class="pagination justify-content-center">
                   <li class="page-item">
-                    <a class="page-link" id="btn_ordenar"href="ticket.html">¡Ordenar!</a>
+                    <a class="page-link" id="btn_ordenar"href="#ticket1" data-toggle="modal">¡Ordenar!</a>
                   </li>
                 </ul>
           
               </div>
               <!-- /.container -->
+              <div class="modal fade" id ="ticket1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class = "modal-title">¡Tu pedido está listo!</h4>
+                      <button tyle = "button" class ="close" data-dismiss ="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Tu pedido es:</p>
+                      <div class="inner-modal" id="modal_interno"></div>
+                      <a class = "btn btn-primary"href="fin.html">¡Estoy de acuerdo con mi pedido!</a>
+                      <a class = "btn btn-primary"href="#" data-dismiss = "modal" class="close2"aria-hidden="true" id="borrar_pedido">Volver a realizar pedido</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
