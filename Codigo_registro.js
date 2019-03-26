@@ -20,6 +20,6 @@ function usuario(nombre,nickname,matricula,contraseña)
 {
     this.nombre = nombre;
     this.nickname = nickname;
-    this.contraseña = contraseña;
     this.matricula = matricula;
+    this.contraseña = contraseña;
 }
