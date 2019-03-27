@@ -1,5 +1,6 @@
 //variables con motivo de soporte logico, solo para poder realizar operaciones de forma mas sencilla.
 
+var pedido = [null];
 var na = "Sin especificar";
 var seleccion;
 var seleccion_pica; 
@@ -39,6 +40,8 @@ var boton2 = document.getElementById("btn_2");
 var boton_ordenar = document.getElementById("btn_ordenar");
 var boton_borrar = document.getElementById("borrar_pedido");
 var modal_in = document.getElementById("modal_interno");
+var modal_in2 = document.getElementById("modal_interno2");
+var modal_in3 = document.getElementById("modal_interno3");
 
 boton1_cancelar = boton1_cancelar.addEventListener("click", cancelar1);
 
@@ -49,6 +52,26 @@ boton_borrar = boton_borrar.addEventListener("click", borrarpedido);
 
 //SECCIÓN DE FUNCIONES, ¡¡NO TOCAR SIN CONSULTAR A ARMANDO!!.
 
+function imprimir_pedido()
+{
+    if(contador2 > 0)
+    {
+        modal_in3.innerHTML = contador2 + " Burrito...13$"
+    }
+    else
+    {
+        console.log("No hay burros en el pedido");
+    }
+    if(contador1 > 0)
+    {
+        modal_in.innerHTML = contador1 + " Hamburguesa...35$";
+    }
+    else
+    {
+        console.log("No hay hamburguesa en el pedido");
+    }
+}
+
 function borrarpedido()
 {
     total = 0;
@@ -58,8 +81,9 @@ function borrarpedido()
 
 function fin_orden()
 {
-    modal_in.innerHTML="Si jala esta madre";
+    imprimir_pedido();
     console.log(total);
+    modal_in2.innerHTML = "Total: " + total;
 }
 
 function picadillo(tipo)
@@ -148,6 +172,7 @@ function añadir2()
     }
     total = total + burro.precio;
     contador2 ++;
+    pedido = pedido + "Burro";
 }
 
 function cancelar1()

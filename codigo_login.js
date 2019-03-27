@@ -20,6 +20,6 @@ function login()
     }
     else
     {
-        //alert("Usuario y/o contraseña invalidos");
+        alert("Usuario y/o contraseña invalidos");
     }   
 }
