@@ -6,8 +6,6 @@ var contraseña_lbl;
 var loginbtn;
 
 loginbtn = document.getElementById("btn_login");
-
-
 loginbtn.addEventListener("click", login);
 
 function login()
@@ -20,6 +18,6 @@ function login()
     }
     else
     {
-        //alert("Usuario y/o contraseña invalidos");
+        alert("Usuario y/o contraseña invalidos");
     }   
 }

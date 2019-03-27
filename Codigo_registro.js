@@ -1,10 +1,5 @@
 //Labels de entrada del formulario.
 
-var nombre = document.getElementById("inputName");
-var nickname = document.getElementById("NombreUsuario");
-var matricula = document.getElementById("Matricula");
-var contraseña = document.getElementById("Contraseña");
-
 var btn_registro = document.getElementById("btn_registrar");
 btn_registro = btn_registro.addEventListener("click", nuevo_usuario);
 
@@ -12,6 +7,10 @@ btn_registro = btn_registro.addEventListener("click", nuevo_usuario);
 
 function nuevo_usuario()
 {
+    var nombre = document.getElementById("inputName");
+    var nickname = document.getElementById("NombreUsuario");
+    var matricula = document.getElementById("Matricula");
+    var contraseña = document.getElementById("Contraseña");
     var usuario = new usuario(nombre,nickname,matricula,contraseña);
     console.log("Se ha creado " + usuario.id_usuario);
 }
