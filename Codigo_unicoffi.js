@@ -34,13 +34,14 @@ var fajas_pollo = new guisos("Fajitas de pollo", "normal");
 var boton1_cancelar = document.getElementById("btn_1_cancel");
 var boton2_cancelar = document.getElementById("btn_2_cancel");
 var boton3_cancelar = document.getElementById("btn_3_cancel");
-var boton4_cancelar = document.getElementById("btn_4_cancel");
+var boton5_cancelar = document.getElementById("btn_5_cancel");
 
 //botones para añadir pedidos y ordenar.
 
 var boton1 = document.getElementById("btn_1");
 var boton2 = document.getElementById("btn_2");
 var boton3 = document.getElementById("btn_3");
+var boton5 = document.getElementById("btn_5");
 var boton_ordenar = document.getElementById("btn_ordenar");
 var boton_borrar = document.getElementById("borrar_pedido");
 var modal_in = document.getElementById("modal_interno");
@@ -51,11 +52,12 @@ var modal_in4 = document.getElementById("modal_interno4");
 boton1_cancelar = boton1_cancelar.addEventListener("click", cancelar1);
 boton2_cancelar = boton2_cancelar.addEventListener("click", cancelar2);
 boton3_cancelar = boton3_cancelar.addEventListener("click", cancelar3);
-boton4_cancelar = boton4_cancelar.addEventListener("click", cancelar4);
+boton5_cancelar = boton5_cancelar.addEventListener("click", cancelar5);
 
 boton1 = boton1.addEventListener("click", añadir1);
 boton2 = boton2.addEventListener("click", añadir2);
 boton3 = boton3.addEventListener("click", añadir3);
+boton5 = boton5.addEventListener("click", añadir5);
 boton_ordenar = boton_ordenar.addEventListener("click", fin_orden);
 boton_borrar = boton_borrar.addEventListener("click", borrarpedido);
 
@@ -246,7 +248,7 @@ function añadir3()
     contador3 ++;
 }
 
-function añadir4()
+function añadir5()
 {
     var seleccion_gui = prompt("Seleccione el guiso de la gordita:  \n(1)Discada\n(2)Deshebrada\n(3)Chicharrón\n(4)Pollo al chipotle\n(5)Fajitas de pollo\n(6)Picadillo(mexicano,rojo o verde)");
     switch(seleccion_gui)
