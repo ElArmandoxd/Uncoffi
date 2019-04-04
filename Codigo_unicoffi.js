@@ -58,6 +58,7 @@ var modal_in2 = document.getElementById("modal_interno2");
 var modal_in3 = document.getElementById("modal_interno3");
 var modal_in4 = document.getElementById("modal_interno4");
 var modal_in5 = document.getElementById("modal_interno5");
+var modal_in6 = document.getElementById("modal_interno6");
 
 boton1_cancelar = boton1_cancelar.addEventListener("click", cancelar1);
 boton2_cancelar = boton2_cancelar.addEventListener("click", cancelar2);
@@ -103,7 +104,7 @@ function imprimir_pedido()
     }
     if(contador4 > 0)
     {
-        modal_in5.innerHTML = contador4 + "Desayuno...38$";
+        modal_in5.innerHTML = contador4 + " Desayuno...38$";
     }
     else
     {
@@ -111,7 +112,11 @@ function imprimir_pedido()
     }
     if (contador5 > 0)
     {
-        
+        modal_in6.innerHTML = contador5 + " Gordita...13$";
+    }
+    else
+    {
+        console.log("No hay desayuno en el pedido");
     }
 }
 
