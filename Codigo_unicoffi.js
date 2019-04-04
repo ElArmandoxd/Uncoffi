@@ -4,6 +4,11 @@ var na = "Sin especificar";
 var seleccion;
 var seleccion_pica; 
 var total = 0;
+var desayuno_guiso;
+var huevo_seleccion;
+var huevo_tipo;
+var chilaquiles_seleccion;
+var chilaquiles_tipo;
 
 //contadores para el numero de pedidos.
 
@@ -11,6 +16,7 @@ var contador1 = 0;
 var contador2 = 0;
 var contador3 = 0;
 var contador4 = 0;
+var contador5 = 0;
 
 //aquí están las comidas ya declaradas con objeto con atributos.
 
@@ -19,6 +25,7 @@ var hamburguesa_pp = new comida(na, 38, "Hamburguesa con papas");
 var burro = new comida(guisos.nombre, 13, "Burro");
 var sincronizada = new comida(guisos.nombre, 23,"Sincronizada");
 var gorditas = new comida(guisos.nombre, 13, "Gordita");
+var desayuno = new comida(na,38,"Desayuno completo");
 
 // aquí están todos los guisos que se pueden usar tanto en burros, gorditas, sincronizadas etc.
 
@@ -34,6 +41,7 @@ var fajas_pollo = new guisos("Fajitas de pollo", "normal");
 var boton1_cancelar = document.getElementById("btn_1_cancel");
 var boton2_cancelar = document.getElementById("btn_2_cancel");
 var boton3_cancelar = document.getElementById("btn_3_cancel");
+var boton4_cancelar = document.getElementById("btn_4_cancel");
 var boton5_cancelar = document.getElementById("btn_5_cancel");
 
 //botones para añadir pedidos y ordenar.
@@ -41,6 +49,7 @@ var boton5_cancelar = document.getElementById("btn_5_cancel");
 var boton1 = document.getElementById("btn_1");
 var boton2 = document.getElementById("btn_2");
 var boton3 = document.getElementById("btn_3");
+var boton4 = document.getElementById("btn_4");
 var boton5 = document.getElementById("btn_5");
 var boton_ordenar = document.getElementById("btn_ordenar");
 var boton_borrar = document.getElementById("borrar_pedido");
@@ -48,15 +57,18 @@ var modal_in = document.getElementById("modal_interno");
 var modal_in2 = document.getElementById("modal_interno2");
 var modal_in3 = document.getElementById("modal_interno3");
 var modal_in4 = document.getElementById("modal_interno4");
+var modal_in5 = document.getElementById("modal_interno5");
 
 boton1_cancelar = boton1_cancelar.addEventListener("click", cancelar1);
 boton2_cancelar = boton2_cancelar.addEventListener("click", cancelar2);
 boton3_cancelar = boton3_cancelar.addEventListener("click", cancelar3);
+boton4_cancelar = boton4_cancelar.addEventListener("click", cancelar4);
 boton5_cancelar = boton5_cancelar.addEventListener("click", cancelar5);
 
 boton1 = boton1.addEventListener("click", añadir1);
 boton2 = boton2.addEventListener("click", añadir2);
 boton3 = boton3.addEventListener("click", añadir3);
+boton4 = boton4.addEventListener("click", añadir4);
 boton5 = boton5.addEventListener("click", añadir5);
 boton_ordenar = boton_ordenar.addEventListener("click", fin_orden);
 boton_borrar = boton_borrar.addEventListener("click", borrarpedido);
@@ -89,6 +101,18 @@ function imprimir_pedido()
     {
         console.log("No hay sincronizada en el pedido");
     }
+    if(contador4 > 0)
+    {
+        modal_in5.innerHTML = contador4 + "Desayuno...38$";
+    }
+    else
+    {
+        console.log("No hay desayuno en el pedido");
+    }
+    if (contador5 > 0)
+    {
+        
+    }
 }
 
 function borrarpedido()
@@ -96,6 +120,9 @@ function borrarpedido()
     total = 0;
     contador1 = 0;
     contador2 = 0;
+    contador3 = 0;
+    contador4 = 0;
+    contador5 = 0;
 }
 
 function fin_orden()
@@ -299,7 +326,7 @@ function añadir5()
             total = total - gorditas.precio;
     }
     total = total + gorditas.precio;
-    contador4 ++;
+    contador5 ++;
 }
 
 function cancelar1()
@@ -315,6 +342,87 @@ function cancelar1()
         alert("No se ha encontrado elemento en el pedido");
     }
     
+}
+
+function añadir4()
+{
+    seleccion_gui = prompt("Seleccione el guiso del desayuno: \n (1)Discada\n(2)Deshebrada\n(3)Chicharrón\n(4)Pollo al chipotle\n(5)Fajitas de pollo\n(6)Picadillo(mexicano,rojo o verde)");
+    switch(seleccion_gui)
+    {
+        case "1":
+            desayuno_guiso = "discada";
+            break;
+        case "2":
+            desayuno_guiso = "deshebrada";
+            break;
+        case "3":
+            desayuno_guiso = "chicharron";
+            break;
+        case "4":
+            desayuno_guiso = "pollo con chipotle";
+            break;
+        case "5":
+            desayuno_guiso = "fajitas de pollo";
+            break;
+        case "6":
+            seleccion_pica = prompt("Seleccione el tipo de picadillo: \n(1)Rojo\n(2)Verde\n(3)A la mexicana");
+            switch (seleccion_pica)
+            {
+                case "1":
+                    picadillo.tipo = "Rojo";
+                    console.log("Se ha añadido al pedido una sincronizada de picadillo " + picadillo.tipo);
+                    break;
+                case "2":
+                    picadillo.tipo = "Verde";
+                    console.log("Se ha añadido al pedido una sincronizada de picadillo " + picadillo.tipo);
+                    break;
+                case "3":
+                    picadillo.tipo = "A la mexicana";
+                    console.log("Se ha añadido al pedido una sincronizada de picadillo " + picadillo.tipo);
+                    break;
+                default:
+                    alert("¡No se ha especificado el tipo de picadillo! por favor intente de nuevo.");
+                    total = total - gorditas.precio;
+            }
+            break;
+        default:
+            alert("¡No se ha especificado el guiso del desayuno! por favor intente de nuevo.");
+            total = total - desayuno.precio;
+            break;
+    }
+    huevo_seleccion = prompt("Seleccione el tipo de huevo: \n (1)Estrellado \n(2)Revuelto con salchicha \n(3)Revuelto con jamón");
+    switch(huevo_seleccion)
+    {
+        case "1":
+            huevo_tipo = "Estrellado";
+            break;
+        case "2":
+            huevo_tipo = "Revuelto con salchicha";
+            break;
+        case "3":
+            huevo_tipo = "Revuelto con jamón";
+            break;
+        default:
+            alert("No se especificó el tipo de huevo, intente de nuevo");
+            contador4 --;
+            total = total - desayuno.precio;
+    }
+    chilaquiles_seleccion = prompt("Seleccione el tipo de chilaquiles: \n (1)Verdes \n(2)Rojos");
+    switch(chilaquiles_seleccion)
+    {
+        case "1":
+            chilaquiles_tipo = "verdes";
+            break;
+        case "2":
+            chilaquiles_tipo = "Rojos";
+            break;
+        default:
+            alert("No se han especidicado los chilaquiles, intente de nuevo");
+            contador4 --;
+            total = total - desayuno.precio;
+        }
+        contador4 ++;
+        total = total + desayuno.precio;
 }
 
 function cancelar2()
@@ -343,13 +451,28 @@ function cancelar3()
         alert("No se ha encontrado elemento en el pedido");
     }
 }
+
 function cancelar4()
 {
     if (contador4 >= 1)
     {
+        console.log("Se ha eliminado un desayuno del pedido");
+        total = total - desayuno.precio;
+        contador4 --;
+    }
+    else
+    {
+        alert("No se ha encontrado elemento en el pedido");
+    }
+}
+
+function cancelar5()
+{
+    if (contador5 >= 1)
+    {
         console.log("Se ha eliminado: " + gorditas.nombre + " del pedido");
         total = total - gorditas.precio;
-        contador4 --;
+        contador5 --;
     }
     else
     {
